@@ -26,7 +26,7 @@
   (is
    (re-find #"Clojure \d+\.\d+(\.\d+)?"
             (:body (response-for service :get "/about"))))
-  
+
   (is (=
        (:headers (response-for service :get "/about"))
        {"Content-Type" "text/html;charset=UTF-8"
